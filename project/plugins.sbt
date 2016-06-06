@@ -1,10 +1,9 @@
-credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
 
-resolvers ++= Seq(
-  Classpaths.sbtPluginReleases,
-  Opts.resolver.sonatypeReleases
-)
+// Remove line below for ivy2 credentials
+//credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
 
+// SBT plugin for ENSIME editor if not using IDE
+addSbtPlugin("org.ensime" % "ensime-sbt" % "0.4.0")
 
 // Github: https://github.com/softprops/bintray-sbt
 // Description: An sbt interface for publishing and resolving bintray packages.
@@ -24,13 +23,13 @@ addSbtPlugin("io.spray" % "sbt-revolver" % "0.7.2")
 // Github: https://github.com/jrudolph/sbt-dependency-graph
 // Description: sbt plugin to create a dependency graph for your project
 // Usage: > dependency-graph
-addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.7.5")
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.2")
 
 // Github: https://github.com/sbt/sbt-pgp
 // Website: http://www.scala-sbt.org/sbt-pgp/
 // Description: The sbt-pgp plugin provides PGP signing for SBT 0.12+
 // Usage: > pgp-cmd gen-key
-addSbtPlugin("com.typesafe.sbt" % "sbt-pgp" % "0.8.3")
+addSbtPlugin("com.jsuereth" % "sbt-pgp" % "1.0.0")
 
 // Github: https://github.com/sbt/sbt-assembly
 // Description: Deploy fat JARs. Restart processes. 
@@ -52,4 +51,6 @@ addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.7.0")
 // Description: doc/tutorial generator for scala
 addSbtPlugin("org.tpolecat" % "tut-plugin" % "0.4.2")
 
-
+// Github: https://github.com/sbt/sbt-release
+// Description: A release plugin for sbt (>= 0.11.0)
+addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.3")

@@ -1,5 +1,5 @@
 import sbt._
-import Version._
+import Versions._
 
 object Dependencies {
   val resolutionRepos = Seq(
