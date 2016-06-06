@@ -1,6 +1,6 @@
 language: scala
 
-scala: 
+scala:
 - 2.11.8
 
 jdk:
@@ -10,21 +10,18 @@ sudo: false
 
 cache:
   directories:
-    - $HOME/.ivy2
-    - $HOME/.sbt
-
+  - "$HOME/.ivy2"
+  - "$HOME/.sbt"
 env:
   global:
-  - secure: "FNle4CtOF9meB3eve8kVU3GDdjmhnywtqCsYk7957IYVAj8Lkfg9I0R8mFlM4DpK9r/bI8uyMdwYaUzcmQR5pPH9wsy1pyD0O/LC+gSZ3a9mq2GaaIFRDrmQPzyVPUqJlUQFNoXk7XIR/65rjBClYvTQCiIVyQuvgx43lbFZd1Zejz2ZSkbIZWkzGLTp8Zc4UinqybUspDYXUy/PWL+lqxGxDiUrrRu3A2Kpdv/1f+c2JeSHmqm4J24rR2A034m616eO02FF44g9w+CXBci2UtRItmNy4A63ysaOO1ZEXbYLSCxxq9X2plXXSFn4bTtV+HMbf0PujlAmvAI+YhBz2l3JPBP+EUK5/7Y1CaRnwvVcNkVBe6BHoKp/mCtAt0W+JfOApac8z5v2NW4vCppAbxnIaIsJtmOYgodhRKpKW8iswsGJAYWKk7cTyJrU/51ZlNXOMwTWlMnB6uUvpagmV1vzsuoB1rHJ/wERJSHhbQ2CQEhiBgbJIb1xPuf595kCX0JLZtGEyyZBVwept/XXx6E3sPDVLwt+umMMEuBxPz2HfK1nFyqF9vqrkWCvMjRamqTzG7/t8iqIlQVxE0xXy3KWnvvCtfIioLvq3tBJ8Hfw52UBo+GGrjaCuX1nxCdJfniNgeV5y1Z5F0GeRxVG45ucBgV2zXIBKgm9KLJ7Svk="
-  - secure: "ObTluRQ4neztsn6VpEKoNUplAqyYnJQADuFPfhmcSYTwyPs6qrnPrRPtXm/wOOAxDpeAYxVTiyIBZY6d7w5XoKINVqzSjekgQZ2kchDttaxpGC0lywBiAObu8kkZ3zRcmFcbsC1NJQkIY95yMMZz0aaN3Z4PGUJq/iQD1h2UklLJbRFTRZwUQB6qlssA72GTyDeE4lFFghlqKhFLcVWxJ42JtfW3O97xnRP6bEIMbjDiYxFoaPE/CDJYbBAjT02ZpMMo/PJ/pTmtei0xPMLeECEHw/ALDyVNgTIF5tJvRjVI2pzfYiy924BAJxi+IMMJe/N26v/dxSERu0r36yWU6DK4LqXdOuTsXRfFbGAqNmpONgLdHHVzBzdjcZusB34o3/g/wbXI3Z1HITPJW9fSTU2AD/bVWgqN7fotkUW2+MsByzAGVR0EbJfPRrUJaRt1NLiuXjbDpjyh4PstWsgejFHpM2DDT5VCMd/XqsMjl0T4JaBJ42Pyemd5CTujZRfrda3pfQupR15JDPqkQdaR33/g7yzu/ERqly3NLY3JoKbXU1FakKCVFgGHX+bqpFjpdOzI5B1M2I+w1iR1lVcUg1orIc5vrR7Bc7l7H66W/FryKe3KPXTpQkYBw7J4lidWCNqJo807HlZQ7mvRdWTHzz1rJg4Leh+57ihYeMedFJs="
+  - secure: GdX4zMi3VpX62Dh0VB57vshn/n1cl01g+nsRfryV/IzBr6FB0nFOJ12YEW8bOel7GzpldhIpZo17Dcl0Bs+RhTwycyQ81L0D8gUHpRJ78slYQHEpLelWs2WtXi+VJohRZ3xU+4elZfL0TDQFgz9Ok/XTWtuuovR6+ktP1Az1bM4z+6t9o+03XHbr45XZOHUOL6niagRuwbVB2oOaBZTdRg8KLkvi8TspIYw+lrQM0TYjcKxyty+QAxMylcVgpfd9YXRJaYqg7ozjDETJWwxvNPXXOYoXB2N89UIGykYsbvTzQDjkisL3rrPhpgB8EN34G+EKvGd+H5hdhAcCBghdaPeLKi/qmxPLg+rBZsLFgrKW+l7kc918p/zJEREun/FJsm7XJIvRW7hanhieb+Kh4Agv9bo/kcJbwk79A4e/8pDDHxBHqERHzOe1r1m5DaGzpo/15q8gOi6ejZSuaUCWJHt9gMbbvNhasNaEMpr0pQJn0Cr/Y+IvYIgaIAT2NYaQOhDfYxglRB1JEXQM6doVeii2sCrlBDd7iDsLosqkNckEtCqdpHg5X8ZWpbYVv7ToMrQUsFIb3eFw/a4HUdaw3ZtZXZxQS15Si7bL+umhdIjSa36YuSe+C+EBc7QCEZ1PSVxb2/6M5r75M6D/CvxIXxkFI9dBSxmCY02G3n7+vlA=
+  - secure: 0G15FXoieJPUhJmiz1LpIAPNHDoRyxe2p3GXv1MU0DcDDYs/koZu+vAeiQpjj9//RFtFrhRxVTbCblsvH0j6dBWcrsU5gjNqci9nWkpyU4aNbnSmtCoVageiLuwohiy/42/ciXGJVhxdPe+w9OlJp+T71zSYLZuj8MKXExG+cooRaLGnHGYDKufJwwqZz3Ve7yEHshz3U1VlLJY7m9TZyUtyiF14/b27Tavcegc8WRTbI5F0XEHiGEU4Y7mWnlFK/0NpyfC6R2tVFBHpYmp2M32UK+FcnpXJqiCxt0SBwVKo0m7BS3jy7GOkVphCfI/vkBmkHgapz6xorLIEwBj0XDb6/5wLwalpwz/c9HgZMdM+36ceIMd4yirnTazs2Mz1DTzcQJtpBeOF7h6yu6FlHAXV5ndhCQHkr11TM86P408rJyvyDUWmyxVzkoTyljIkwtTwDB8XVXWMZ8UzJ4XxBCv3r1KU42qVNjXG1rvUrl3WCrZZDy0k7yHYK13OBPQJEHWQtF7BAq8cUrIydmUQScZIkSrUVeFc/cIqLY6KZNEmuGZfPuR8XjZov1Mzqukf3mRcjaMuKhaVTRQujs7PFjwMwn12xRMesSXABCgA6ZKZt+X42WME4Zqc9GCnN+TlVBMshFfe5yWhnrcGave5Y4KTsiyEaizFZvl4laX65aE=
 
 script:
-  - sbt ++$TRAVIS_SCALA_VERSION -Dfile.encoding=UTF8 test
-  - (test $TRAVIS_SCALA_VERSION == "2.11.8" && sbt ++$TRAVIS_SCALA_VERSION -Dfile.encoding=UTF8 -J-Xms2g -J-Xmx2g docs/tut)
-
+- sbt ++$TRAVIS_SCALA_VERSION -Dfile.encoding=UTF8 test
+- (test $TRAVIS_SCALA_VERSION == "2.11.8" && sbt ++$TRAVIS_SCALA_VERSION -Dfile.encoding=UTF8
+  -J-Xms2g -J-Xmx2g docs/tut)
 after_success:
-  - >
-    test $TRAVIS_PULL_REQUEST == "false" &&
-    test $TRAVIS_BRANCH == "series/0.1" &&
-    sh "$TRAVIS_BUILD_DIR/.travis.credentials.sh" &&
-    sbt 'set version := version.value + "." + System.getenv("TRAVIS_BUILD_NUMBER")' publish
+- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "series/0.1" && sh
+  "$TRAVIS_BUILD_DIR/.travis.credentials.sh" && sbt 'set version := version.value
+  + "." + System.getenv("TRAVIS_BUILD_NUMBER")' publish

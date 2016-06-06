@@ -15,7 +15,7 @@ lazy val contributors = Seq(
 // but can be shared across the multi projects.
 def buildLevelSettings: Seq[Setting[_]] = Seq(
   organization in ThisBuild := "jafaeldon",
-  shellPrompt in ThisBuild  := { state => Project.extract(state).currentRef.project + "> " }
+  shellPrompt in ThisBuild := { state => Project.extract(state).currentRef.project + "> " }
 )
 
 def commonSettings: Seq[Setting[_]] = Seq(
@@ -95,7 +95,7 @@ lazy val publishSettings = Seq(
   pomIncludeRepository := { _ => false },
   licenses := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html")),
   homepage := Some(url("http://jafaeldon.com")),
-  publishTo := Some(Resolver.file("file",  new File(Path.userHome.absolutePath+"/.m2/repository"))),
+//  publishTo := Some(Resolver.file("file",  new File(Path.userHome.absolutePath+"/.m2/repository"))),
 /* // For Sonatype Release
   credentials += Credentials("Sonatype Nexus Repository", "oss.sonatype.org", publishUsername, publishPassword),
   publishTo := {
@@ -130,7 +130,7 @@ lazy val publishSettings = Seq(
     }
     val stripTestScope = stripIf { n => n.label == "dependency" && (n \ "scope").text == "test" }
     new RuleTransformer(stripTestScope).transform(node)(0)
-  },
+  }
 )
 
 lazy val noPublish = Seq(
