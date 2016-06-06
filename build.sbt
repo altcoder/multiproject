@@ -22,30 +22,26 @@ def commonSettings: Seq[Setting[_]] = Seq(
   publishMavenStyle := true,
   credentials += Credentials("Sonatype Nexus Repository", "oss.sonatype.org", publishUsername, publishPassword),
   publishTo := Some(Resolver.file("file",  new File(Path.userHome.absolutePath+"/.m2/repository"))),
-  /** For open source project
   publishTo := {
     val nexus = "https://oss.sonatype.org/"
     if (isSnapshot.value)
       Some("snapshots" at nexus + "content/repositories/snapshots") 
     else
       Some("releases"  at nexus + "service/local/staging/deploy/maven2")
-  }
-  */
+  },
   pomIncludeRepository := { _ => false },
-  /** For open source project
   licenses := Seq("Apache 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.html")),
-  */
   homepage := Some(url("http://jafaeldon.com")),
   pomExtra := (
     <scm>
-      <url>git@http://github.com/jafaeldon/multiproject-test.com:multiproject-test/multiproject-test.git</url>
-      <connection>scm:git:git@http://github.com/jafaeldon/multiproject-test:multiproject-test/multiproject-test.git</connection>
+      <url>git@http://github.com/jafaeldon/multiproject.git</url>
+      <connection>scm:git:git@http://github.com/jafaeldon/multiproject.git</connection>
     </scm>
     <developers>
       <developer>
         <id>jafaeldon</id>
         <name>James Faeldon</name>
-        <url>http://http://github.com/jafaeldon/multiproject-test/jafaeldon/</url>
+        <url>http://http://github.com/jafaeldon</url>
       </developer>
     </developers>
   ),

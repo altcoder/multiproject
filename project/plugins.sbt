@@ -5,6 +5,11 @@ resolvers ++= Seq(
   Opts.resolver.sonatypeReleases
 )
 
+
+// Github: https://github.com/softprops/bintray-sbt
+// Description: An sbt interface for publishing and resolving bintray packages.
+addSbtPlugin("me.lessis" % "bintray-sbt" % "0.3.0")
+
 // Github: https://github.com/softprops/ls
 // Website: http://ls.implicit.ly/#publishing
 // Description: A scala card catalog http://ls.implicit.ly/. Try and install libraries from ls.implicit.ly
