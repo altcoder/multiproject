@@ -48,4 +48,8 @@ addSbtPlugin("com.eed3si9n" % "sbt-dirty-money" % "0.1.0")
 // Usage: > scalastyle
 addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.7.0")
 
+// Github: https://github.com/tpolecat/tut
+// Description: doc/tutorial generator for scala
+addSbtPlugin("org.tpolecat" % "tut-plugin" % "0.4.2")
+
 

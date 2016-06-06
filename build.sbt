@@ -126,6 +126,16 @@ lazy val benchmarkProj = (project in utilPath / "benchmark").
     )
   )
 
+lazy val docs = project.in(file("docs")).
+  dependsOn(coreProj).
+  settings(
+    commonSettings,
+    tutSettings,
+    name := "Documentation",
+    tutSourceDirectory := file("docs") / "src",
+    tutTargetDirectory := file("docs"),
+    scalacOptions ~= {_.filterNot("-Ywarn-unused-import" == _)}
+  )
 
 /* Nested project paths */
 def utilPath   = file("util")
