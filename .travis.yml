@@ -27,7 +27,7 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
   
 script:
-  - docker-compose -f devops/docker-compose-test.yml up -d
+  - docker-compose -f $TRAVIS_BUILD_DIR/devops/docker-compose-test.yml up -d
   - sbt ++$TRAVIS_SCALA_VERSION -Dfile.encoding=UTF8 test
   - (test $TRAVIS_SCALA_VERSION == "2.11.8" && sbt ++$TRAVIS_SCALA_VERSION -Dfile.encoding=UTF8 -J-Xms2g -J-Xmx2g docs/tut)
 
