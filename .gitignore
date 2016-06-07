@@ -12,12 +12,9 @@ Icon
 # --------------------
 # Eclipse or Nodeclipse "Enide Studio" Files
 # --------------------
-# recommended to add to Git SCM
-# or generate with `nodeclipse -p` command
 .project
 .settings/
 .*.md.html
-
 
 # --------------------
 # IntelliJ Files
@@ -39,6 +36,13 @@ nbactions.xml
 nb-configuration.xml
 
 # --------------------
+# Ensime Files
+# --------------------
+.ensime
+.ensime_cache/
+\#*
+
+# --------------------
 # vim Files
 # --------------------
 *.swp
@@ -54,3 +58,9 @@ nb-configuration.xml
 data/
 target/
 temp/
+assembly/
+logs/
+node_modules/
+lib/
+derby.log
+metastore_db/

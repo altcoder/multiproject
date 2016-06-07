@@ -1,0 +1,10 @@
+version: "2"
+services:
+  cassandra:
+    image: cassandra
+    ports:
+      - "127.0.0.1:9042:9042"
+  mongo:
+    image: mongo
+    ports:
+      - "127.0.0.1:27017:27017"

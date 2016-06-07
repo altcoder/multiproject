@@ -1,5 +1,4 @@
 # Project Name
-===================
 
 [![Build Status](https://travis-ci.org/jafaeldon/multiproject.svg?branch=wip/0.1)](http://travis-ci.org/jafaeldon/multiproject)
 
@@ -28,6 +27,12 @@ More detailed documentation is available from the project site, at
 ["Building Project"](http://project.org/docs/latest/building-project.html).
 
 ## Running Tests
+
+Setup the environment first using
+    1. Install ["docker"](https://docs.docker.com/engine/quickstart/) and ["docker-compose"](https://docs.docker.com/compose/install/)
+    2. Run services for testing
+       docker-compose -f devops/docker-compose-test.yml up
+
 
 Testing first requires [building Project](#building-project). Once Project is built, tests
 can be run using:
