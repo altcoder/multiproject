@@ -4,7 +4,16 @@ services:
     build:
       context: ./docker/app
     working_dir: /data/app
-    depends_on:
+    links:
       - mongo
+      - cassandra
+
   mongo:
     image: mongo
+    ports:
+      - "27017"
+  cassandra:
+    image: cassandra
+    ports:
+      - "9042"
+    
