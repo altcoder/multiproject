@@ -6,7 +6,10 @@ scala:
 jdk:
   - oraclejdk8
 
-sudo: false
+sudo: required
+
+services:
+  - docker
 
 cache:
   directories:
@@ -18,9 +21,9 @@ env:
     - secure: 0G15FXoieJPUhJmiz1LpIAPNHDoRyxe2p3GXv1MU0DcDDYs/koZu+vAeiQpjj9//RFtFrhRxVTbCblsvH0j6dBWcrsU5gjNqci9nWkpyU4aNbnSmtCoVageiLuwohiy/42/ciXGJVhxdPe+w9OlJp+T71zSYLZuj8MKXExG+cooRaLGnHGYDKufJwwqZz3Ve7yEHshz3U1VlLJY7m9TZyUtyiF14/b27Tavcegc8WRTbI5F0XEHiGEU4Y7mWnlFK/0NpyfC6R2tVFBHpYmp2M32UK+FcnpXJqiCxt0SBwVKo0m7BS3jy7GOkVphCfI/vkBmkHgapz6xorLIEwBj0XDb6/5wLwalpwz/c9HgZMdM+36ceIMd4yirnTazs2Mz1DTzcQJtpBeOF7h6yu6FlHAXV5ndhCQHkr11TM86P408rJyvyDUWmyxVzkoTyljIkwtTwDB8XVXWMZ8UzJ4XxBCv3r1KU42qVNjXG1rvUrl3WCrZZDy0k7yHYK13OBPQJEHWQtF7BAq8cUrIydmUQScZIkSrUVeFc/cIqLY6KZNEmuGZfPuR8XjZov1Mzqukf3mRcjaMuKhaVTRQujs7PFjwMwn12xRMesSXABCgA6ZKZt+X42WME4Zqc9GCnN+TlVBMshFfe5yWhnrcGave5Y4KTsiyEaizFZvl4laX65aE=
 
 script:
+  - docker-compose -f devops/docker-compose-test.yml up -d
   - sbt ++$TRAVIS_SCALA_VERSION -Dfile.encoding=UTF8 test
-  - (test $TRAVIS_SCALA_VERSION == "2.11.8" && sbt ++$TRAVIS_SCALA_VERSION -Dfile.encoding=UTF8
-  -J-Xms2g -J-Xmx2g docs/tut)
+  - (test $TRAVIS_SCALA_VERSION == "2.11.8" && sbt ++$TRAVIS_SCALA_VERSION -Dfile.encoding=UTF8 -J-Xms2g -J-Xmx2g docs/tut)
 
 after_success:
   - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "wip/0.1" && sh
