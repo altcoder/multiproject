@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/jafaeldon/multiproject.svg?branch=master)](http://travis-ci.org/jafaeldon/multiproject)
-[![codecov.io](http://codecov.io/github/jafaeldon/multiproject/coverage.svg?branch=master)](http://codecov.io/gh/jafaeldon/multiproject?branch=master)
+[![Code Coverage](http://codecov.io/github/jafaeldon/multiproject/coverage.svg?branch=master)](http://codecov.io/gh/jafaeldon/multiproject?branch=master)
+[![Chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jafaeldon/multiproject)
 
 ## Overview
 

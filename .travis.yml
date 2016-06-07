@@ -8,6 +8,14 @@ jdk:
 
 sudo: false
 
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/8bcd50552fa888802877
+    on_success: change
+    on_failure: always
+    on_start: never
+
 services:
   - mongodb
   - cassandra
