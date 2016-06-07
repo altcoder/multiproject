@@ -168,7 +168,7 @@ def rootSettings = Seq(
 lazy val core = (project in file("core")).
   settings(
     commonSettings,
-    name := "core",
+    name := "app-core",
     libraryDependencies ++= Seq(
       scalatest   % Test,
       scalacheck  % Test
@@ -179,19 +179,19 @@ lazy val sample = (project in file("sample")).
   dependsOn(core).
   settings(
     commonSettings,
-    name:= "sample",
+    name:= "app-sample",
     libraryDependencies ++= Seq(
       scalatest   % Test,
       scalacheck  % Test
     )
   )
 
-lazy val benchmark = (project in utilPath / "benchmark").
+lazy val benchmark = (project in testPath / "benchmark").
   dependsOn(core).
   settings(
     commonSettings,
     noPublish,
-    name := "benchmark",
+    name := "app-benchmark",
     libraryDependencies ++= Seq(
       scalatest   % Test,
       scalacheck  % Test
@@ -203,12 +203,12 @@ lazy val docs = project.in(file("docs")).
   settings(
     commonSettings,
     tutSettings,
-    name := "docs",
+    name := "app-docs",
     tutSourceDirectory := file("docs") / "src",
     tutTargetDirectory := file("docs"),
     scalacOptions ~= {_.filterNot("-Ywarn-unused-import" == _)}
   )
 
 /* Nested project paths */
-def utilPath   = file("util")
+def testPath   = file("test")
 

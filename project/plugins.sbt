@@ -54,3 +54,7 @@ addSbtPlugin("org.tpolecat" % "tut-plugin" % "0.4.2")
 // Github: https://github.com/sbt/sbt-release
 // Description: A release plugin for sbt (>= 0.11.0)
 addSbtPlugin("com.github.gseitz" % "sbt-release" % "1.0.3")
+
+// Github: https://github.com/scoverage/sbt-scoverage
+// Description: sbt plugin for scoverage
+addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.3.5")
